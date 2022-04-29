@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".ResultsFragment">
+
+<data>
+    <variable
+        name="viewModel"
+        type="com.example.bookfinder.model.BookViewModel" />
+
+    <variable
+        name="resultsFragment"
+        type="com.example.bookfinder.ResultsFragment" />
+</data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/default_margin">
+
+            <!-- Group the results into a single ViewGroup and set focusable = true,
+                 so all fields will be read aloud together by the accessibility service -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ncdl_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ncdl"
+                    android:textAllCaps="true"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/ncdl_results"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/results_margin"
+                    android:text="@{viewModel.resultsNCDL}"
+                    tools:text="Yo check out these results from NCDL. You're in luck!!!" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

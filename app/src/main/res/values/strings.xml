@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Book Finder</string>
+    <string name="results_fragment_label">Search Results for </string>
+    <string name="enter_book_title">Enter book title</string>
+    <string name="submit">Submit</string>
+    <string name="ncdl">Northern CA Digital Library</string>
+</resources>
